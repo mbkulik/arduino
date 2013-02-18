@@ -2,20 +2,18 @@
 #include <util/delay.h>
 
 int
-main( void )
-{
-  DDRB = 0xFF;
+main( void ) {   
+	DDRB = 0xFF;
   
-  while( 1 )
-    {
-      PORTB = 0x20;
+	while( 1 ) {
+		PORTB = 0x20;
       
-      _delay_ms( 5000 );
+		_delay_ms( 5000 );
       
-      PORTB = 0x00;
+		PORTB = 0x00;
       
-      _delay_ms( 5000 );
-    }
-  
+		_delay_ms( 5000 );
+	}
+
   return 1;
 }
