@@ -13,7 +13,8 @@ blink.hex: ${OBJ}
 	${OBJCPY} -O ihex -R .eeprom ${OBJ} ${HEX}
 
 upload: ${HEX}
-	avrdude -p ${PLATFORM} -c arduino -P /dev/tty.usbmodem621 -b 115200 -D -U flash:w:${HEX}
+	avrdude -p ${PLATFORM} -c arduino -P /dev/tty.usbmodem621 \
+	-b 115200 -D -U flash:w:${HEX}
 
 .PHONY: clean
 
